@@ -9,6 +9,7 @@ const nextConfig = {
       {
         source: "/contact",
         destination: "/form",
+        permanent: false,
       },
     ];
   },

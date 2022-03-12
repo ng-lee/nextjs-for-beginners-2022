@@ -17,6 +17,9 @@ export default function Home({ results }) {
           padding: 20px;
           gap: 20px;
         }
+        .movie {
+          curser: pointer;
+        }
         .movie img {
           max-width: 100%;
           border-radius: 12px;
@@ -36,7 +39,9 @@ export default function Home({ results }) {
 }
 
 export async function getServerSideProps() {
-  const { results } = await (await fetch("/api/movies")).json();
+  const { results } = await (
+    await fetch("http://localhost:3000/api/movies")
+  ).json();
   return {
     props: {
       results,
